@@ -35,7 +35,7 @@ class CalculatorBrain{
         case BinaryOperation((Double,Double)->Double)
         case Equals
         
-    }
+    } 
     
     func performOperation(symbol: String){
         if let operation = operations[symbol]{

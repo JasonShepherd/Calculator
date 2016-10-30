@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         } else{
             display.text = button
         }
-        userisInTheMiddleOfTyping = true
+        userisInTheMiddleOfTyping = true  
     }
     
     
