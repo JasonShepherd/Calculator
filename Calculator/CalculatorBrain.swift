@@ -29,7 +29,7 @@ class CalculatorBrain{
         "±" : Operation.UnaryOperation({-$0}),
         "tan": Operation.UnaryOperation(tan),
         "sin":Operation.UnaryOperation(sin),
-        "C"  : Operation.Constant(0),
+        "C"  : Operation.UnaryOperation({$0-$0}),
         "=": Operation.Equals
     ]
     
@@ -60,6 +60,13 @@ class CalculatorBrain{
         }
     }
     
+    
+    private func clear(accumulator: Double)->Double{
+        
+        return accumulator
+        
+    }
+    
     private func executePendingBinaryOPeration(){
         if pending != nil{
             accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
@@ -77,12 +84,11 @@ class CalculatorBrain{
         var firstOperand: Double
     }
     
-    var result: Double{
+   var result: Double{
         get{
             return accumulator
         }
     }
-    
     
     
     
