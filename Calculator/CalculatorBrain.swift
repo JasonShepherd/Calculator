@@ -70,11 +70,12 @@ class CalculatorBrain{
     
     
     
-      private  func clear(accumulator: Double)->Double{
-        
-        return accumulator
-        
-    }
+//      private  func clear(accumulator: Double)->Double{
+//        pending = nil
+//        internalProgram.removeAll()
+//        return accumulator
+//        
+//    }
     
     private func executePendingBinaryOPeration(){
         if pending != nil{
