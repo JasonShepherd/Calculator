@@ -37,6 +37,7 @@ class CalculatorBrain{
         "=": Operation.Equals
     ]
     
+    
     enum Operation{
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
